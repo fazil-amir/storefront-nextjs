@@ -1,9 +1,6 @@
 services:
   storefront:
-    build:
-      context: https://github.com/fazil-amir/storefront-nextjs.git#main
-      dockerfile: Dockerfile
-    image: storefront:latest
+    image: fazilamir/storefront:latest
     container_name: storefront
     restart: unless-stopped
     ports:
