@@ -1,7 +1,7 @@
 services:
   storefront:
     build:
-      context: https://github.com/fazil-amir/storefront-nextjs#main
+      context: https://github.com/fazil-amir/storefront-nextjs.git#main
       dockerfile: Dockerfile
     image: storefront:latest
     container_name: storefront
