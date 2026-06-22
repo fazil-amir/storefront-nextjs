@@ -1,0 +1,12 @@
+services:
+  storefront:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: storefront:latest
+    container_name: storefront
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
