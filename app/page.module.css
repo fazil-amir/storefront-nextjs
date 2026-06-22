@@ -1,0 +1,28 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 64rem;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gridItem {
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .gridItem {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+}

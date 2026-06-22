@@ -1,0 +1,20 @@
+.section {
+  margin-top: 2.5rem;
+}
+
+.sectionHeading {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.infoList {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.infoLabel {
+  color: var(--color-muted);
+}

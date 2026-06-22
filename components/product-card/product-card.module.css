@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  height: 250px;
+  background: var(--color-muted-bg);
+}
+
+.image {
+  object-fit: contain
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+}
+
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.rating {
+  color: var(--color-muted);
+}
+
+.skeletonBlock {
+  border-radius: 0.25rem;
+  background: var(--color-skeleton);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonImage {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.skeletonRow {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skeletonTitleLineShort {
+  height: 1rem;
+  width: 66%;
+}
+
+.skeletonMetaValue {
+  height: 1rem;
+  width: 3rem;
+}
+
+.skeletonMetaValueSmall {
+  height: 1rem;
+  width: 2.5rem;
+}
