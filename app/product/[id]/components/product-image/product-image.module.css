@@ -1,3 +1,17 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .carousel {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+}
+
 .imageWrap {
   position: relative;
   aspect-ratio: 1 / 1;
@@ -7,15 +21,52 @@
   background: var(--color-muted-bg);
 }
 
-@media (min-width: 640px) {
-  .imageWrap {
-    flex: 1 1 50%;
-    min-width: 0;
-  }
-}
-
 .image {
   object-fit: cover;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 9999px;
+  background: var(--background);
+  color: var(--foreground);
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prevButton {
+  left: 0.75rem;
+}
+
+.nextButton {
+  right: 0.75rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  border: none;
+  border-radius: 9999px;
+  background: var(--color-muted-bg);
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: var(--foreground);
 }
 
 .skeletonBlock {

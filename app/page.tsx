@@ -2,23 +2,13 @@
 
 import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import ProductCard, { ProductCardSkeleton } from "@/components/product-card";
+import ProductCard from "@/components/product-card";
+import ProductGridSkeleton from "@/components/product-grid-skeleton";
 import Pagination from "@/components/pagination";
+import ErrorMessage from "@/components/error-message";
 import { useHomeProducts } from "@/contexts/product-context";
 import { PAGE_SIZE } from "@/libs/constants";
 import styles from "./page.module.css";
-
-function ProductGridSkeleton() {
-  return (
-    <div className={styles.grid}>
-      {Array.from({ length: PAGE_SIZE }).map((_, i) => (
-        <div key={i} className={styles.gridItem}>
-          <ProductCardSkeleton />
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function HomePage({ page }: { page: number }) {
   const router = useRouter();
@@ -31,7 +21,7 @@ function HomePage({ page }: { page: number }) {
   if (error) {
     return (
       <div className={styles.container}>
-        <p className={styles.error}>{error}</p>
+        <ErrorMessage message={error} />
       </div>
     )
   }

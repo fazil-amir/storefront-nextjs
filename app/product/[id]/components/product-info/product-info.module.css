@@ -9,12 +9,34 @@
 }
 
 .infoList {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: 0.875rem;
 }
 
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .infoLabel {
+  flex: 0 0 6rem;
   color: var(--color-muted);
+}
+
+.skeletonBlock {
+  border-radius: 0.25rem;
+  background: var(--color-skeleton);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonLabel {
+  flex: 0 0 6rem;
+  height: 1rem;
+}
+
+.skeletonValue {
+  flex: 1;
+  height: 1rem;
 }

@@ -1,0 +1,18 @@
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.footerCount {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.footerTotal {
+  font-size: 1.125rem;
+  font-weight: 600;
+}

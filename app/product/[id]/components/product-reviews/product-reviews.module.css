@@ -41,3 +41,24 @@
   font-size: 0.875rem;
   color: var(--color-muted);
 }
+
+.skeletonBlock {
+  border-radius: 0.25rem;
+  background: var(--color-skeleton);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonReviewer {
+  height: 0.875rem;
+  width: 6rem;
+}
+
+.skeletonMeta {
+  height: 0.75rem;
+  width: 8rem;
+}
+
+.skeletonComment {
+  height: 1rem;
+  width: 100%;
+}

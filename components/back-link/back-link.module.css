@@ -1,0 +1,14 @@
+.link {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+
+  span {
+    position: relative;
+    top: -1px;
+  }
+}
